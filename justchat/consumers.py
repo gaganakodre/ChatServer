@@ -35,4 +35,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     @sync_to_async
     def save_messages(self, room_name, username, message):
+        """
+        adding data to
+        """
         Messages.objects.create(room_name=room_name, username=username, message=message)
