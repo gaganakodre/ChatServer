@@ -68,7 +68,8 @@ TEMPLATES = [
         },
     },
 ]
-
+# A channel layer is a kind of communication system. It allows multiple consumer 
+# instances to talk with each other, and with other parts of Django.
 WSGI_APPLICATION = 'chatserver.wsgi.application'
 ASGI_APPLICATION = 'chatserver.asgi.application'
 CHANNEL_LAYERS = {

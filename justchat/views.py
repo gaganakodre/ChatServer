@@ -5,11 +5,13 @@ from django.shortcuts import redirect, render, HttpResponse
 
 from .models import Messages
 
-
+# An index view that lets you type the name of a chat room to join.
 def index(request):
     return render(request, 'justchat/index.html', {})
 
-
+# A room view that lets you see messages posted in a particular chat room.
+# The room view will use a WebSocket to communicate with the Django server
+#  and listen for any messages that are posted.
 def room(request, room_name):
     if not request.user.is_authenticated:
         return redirect('/chat/')

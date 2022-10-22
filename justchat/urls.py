@@ -8,3 +8,13 @@ urlpatterns = [
 
 
 ]
+
+
+
+# to restart the redis server:
+# ---------------------------
+# 1.wsl
+# 2.sudo service redis-server start
+# 3.sudo service redis-server status
+# i need to go and login to the admin
+# gagana,Gowri@123

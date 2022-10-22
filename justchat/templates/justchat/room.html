@@ -7,11 +7,13 @@
 <body>
 <h1>{{room_name}}</h1>
     <textarea id="chat-log" cols="100" rows="20"></textarea><br>
+    <!-- a tag can output content, serve as a control structure  -->
     {% for message in messages %}
     {{ message.username }}: {{ message.message }}
     {% endfor %}
     <input id="chat-message-input" type="text" size="100"><br>
     <input id="chat-message-submit" type="button" value="Send">
+    <!-- filter -->
     {{ room_name|json_script:"room-name" }}
     {{ user|json_script:"user" }}
     {{message.username}}:{{message.message}}
